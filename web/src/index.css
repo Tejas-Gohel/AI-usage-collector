@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Expose runtime CSS variables as Tailwind colors. Because the values are var()s that
+   flip on .light/.dark, every `text-fg/70`, `bg-fg/5`, `border-fg/10` etc. re-themes at
+   runtime via color-mix — no per-component conditionals needed. */
+@theme {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-card: var(--card);
+  --color-panel: var(--panel);
+  --color-inset: var(--inset);
+  --color-accent: var(--accent-text);
+  --color-good: var(--good-c);
+  --color-warn: var(--warn-c);
+  --color-bad: var(--bad-c);
+}
+
+:root,
+.dark {
+  --bg: #0a0a0f;
+  --fg: #e9e9f1;
+  --card: #14141d; /* raised surface vs page */
+  --panel: #1b1b26; /* popovers, select, modal */
+  --inset: #0e0e15; /* recessed: inputs, table heads */
+  --accent-text: #a78bfa; /* violet-400 — readable on dark */
+  --good-c: #34d399;
+  --warn-c: #fbbf24;
+  --bad-c: #f87171;
+  color-scheme: dark;
+}
+
+.light {
+  --bg: #eef0f6;
+  --fg: #1a1b23;
+  --card: #ffffff;
+  --panel: #ffffff;
+  --inset: #f1f3f8;
+  --accent-text: #6d28d9; /* violet-700 — readable on light */
+  --good-c: #047857;
+  --warn-c: #b45309;
+  --bad-c: #dc2626;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--fg) 18%, transparent);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

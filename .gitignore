@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Personal / generated (each user has their own)
+usage-collector.config.json
+ai-manager-review.json
