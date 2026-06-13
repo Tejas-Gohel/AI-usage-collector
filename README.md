@@ -35,11 +35,6 @@ Everything runs on your machine. **No API keys, no telemetry, nothing leaves you
 
 ## Screenshots
 
-**Skills & AI Manager** — toolkit inventory, per-skill efficiency scores, and the AI-manager review with
-one-click *Improve* prompts:
-
-![Skills & AI Manager tab](docs/toolkit-dark.png)
-
 **Light theme:**
 
 ![Overview in light theme](docs/overview-light.png)
