@@ -11,6 +11,8 @@ reads those transcripts and turns them into answers to two questions:
 
 Everything runs on your machine. **No API keys, no telemetry, nothing leaves your computer.**
 
+![Claude Usage Collector — overview](docs/overview-dark.png)
+
 ---
 
 ## Highlights
@@ -28,6 +30,19 @@ Everything runs on your machine. **No API keys, no telemetry, nothing leaves you
 
 > **Privacy:** the dashboard only reads local transcript files and serves them to `localhost`. It never
 > makes outbound network calls (the optional AI-Manager refresh runs your local `claude` CLI).
+
+---
+
+## Screenshots
+
+**Skills & AI Manager** — toolkit inventory, per-skill efficiency scores, and the AI-manager review with
+one-click *Improve* prompts:
+
+![Skills & AI Manager tab](docs/toolkit-dark.png)
+
+**Light theme:**
+
+![Overview in light theme](docs/overview-light.png)
 
 ---
 
